@@ -14,14 +14,7 @@ class Solution:
             if not node:
                 return
             
-            if fromSide == 0:
-                if node.right:
-                    maxZig[0] = max(maxZig[0], depth+1)
-                    dfs(node.right, depth+1, 1)
-                if node.left:
-                    maxZig[0] = max(maxZig[0], depth+1)
-                    dfs(node.left, depth+1, 2)
-            elif fromSide == 1:
+            if fromSide == 1:
                 if node.left:
                     maxZig[0] = max(maxZig[0], depth+1)
                     dfs(node.left, depth+1, 2)
